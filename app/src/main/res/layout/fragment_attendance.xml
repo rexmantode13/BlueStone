@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="24dp">
+
+        <!-- Title & Subtitle -->
+        <TextView
+            style="@style/TextAppearance.BlueStone.HeadlineMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/mark_attendance" />
+
+        <TextView
+            style="@style/TextAppearance.BlueStone.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/on_surface_variant"
+            android:text="Scheduled classes are automatically activated for one-tap marking" />
+
+        <!-- Auto-Activated Scheduled Class Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_active_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/outline"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <!-- Header badge & status indicator -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_active_class_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_badge_present"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="3dp"
+                        android:textColor="@color/present"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:text="● ACTIVE CLASS" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_active_class_time"
+                        style="@style/TextAppearance.BlueStone.LabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:text="09:00 - 10:00" />
+                </LinearLayout>
+
+                <!-- Subject Name & Code -->
+                <TextView
+                    android:id="@+id/tv_active_subject_name"
+                    style="@style/TextAppearance.BlueStone.TitleLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_background"
+                    android:text="Data Structures and Algorithms (CS202)" />
+
+                <TextView
+                    android:id="@+id/tv_active_class_details"
+                    style="@style/TextAppearance.BlueStone.BodyMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/on_surface_variant"
+                    android:text="Lab 201 • Prof. Donald Knuth" />
+
+                <!-- Projection pill -->
+                <TextView
+                    android:id="@+id/tv_active_subject_standing"
+                    style="@style/TextAppearance.BlueStone.LabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/primary"
+                    android:text="Current Attendance: 85.0% • On Track" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="14dp"
+                    android:background="@color/outline" />
+
+                <!-- Attendance Status Selection Buttons (Clean, Fitted Alignment) -->
+                <TextView
+                    style="@style/TextAppearance.BlueStone.LabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/on_surface_variant"
+                    android:text="Select Attendance Status" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggle_attendance_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_status_present"
+                        style="@style/Widget.BlueStone.ToggleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:minWidth="0dp"
+                        android:paddingHorizontal="4dp"
+                        android:textSize="12sp"
+                        android:letterSpacing="0"
+                        android:singleLine="true"
+                        android:text="@string/present"
+                        app:strokeColor="@color/present" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_status_absent"
+                        style="@style/Widget.BlueStone.ToggleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:minWidth="0dp"
+                        android:paddingHorizontal="4dp"
+                        android:textSize="12sp"
+                        android:letterSpacing="0"
+                        android:singleLine="true"
+                        android:text="@string/absent"
+                        app:strokeColor="@color/absent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_status_unmarked"
+                        style="@style/Widget.BlueStone.ToggleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:minWidth="0dp"
+                        android:paddingHorizontal="4dp"
+                        android:textSize="12sp"
+                        android:letterSpacing="0"
+                        android:singleLine="true"
+                        android:text="Unmarked"
+                        app:strokeColor="@color/unmarked" />
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <!-- Date & Session Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_pick_date"
+                        style="@style/Widget.BlueStone.Button.Outlined"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:minWidth="0dp"
+                        android:paddingHorizontal="8dp"
+                        android:textSize="12sp"
+                        android:text="Today"
+                        app:icon="@drawable/ic_calendar"
+                        app:iconSize="16dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_session_number"
+                        style="@style/Widget.BlueStone.TextInputLayout"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:hint="@string/session">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_session_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:paddingVertical="0dp"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:textSize="13sp"
+                            android:text="1"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Notes Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_notes"
+                    style="@style/Widget.BlueStone.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/notes">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="13sp"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Save Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save_attendance"
+                    style="@style/Widget.BlueStone.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="14dp"
+                    app:cornerRadius="12dp"
+                    android:text="@string/mark_attendance" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Monthly Calendar Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                style="@style/TextAppearance.BlueStone.TitleMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Attendance Calendar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_prev_month"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_chevron_left"
+                    android:contentDescription="Previous Month" />
+
+                <TextView
+                    android:id="@+id/tv_calendar_month_year"
+                    style="@style/TextAppearance.BlueStone.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="October 2026" />
+
+                <ImageButton
+                    android:id="@+id/btn_next_month"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_chevron_right"
+                    android:contentDescription="Next Month" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Calendar Container Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/outline"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/surface">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <!-- Weekday headers -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/primary" android:textStyle="bold" android:text="Mon" />
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/primary" android:textStyle="bold" android:text="Tue" />
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/primary" android:textStyle="bold" android:text="Wed" />
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/primary" android:textStyle="bold" android:text="Thu" />
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/primary" android:textStyle="bold" android:text="Fri" />
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/on_surface_variant" android:text="Sat" />
+                    <TextView style="@style/TextAppearance.BlueStone.LabelMedium" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:textColor="@color/on_surface_variant" android:text="Sun" />
+                </LinearLayout>
+
+                <!-- Calendar grid -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_calendar_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Section: Today's Class Schedule -->
+        <TextView
+            style="@style/TextAppearance.BlueStone.TitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold"
+            android:text="Today's Class Schedule" />
+
+        <TextView
+            style="@style/TextAppearance.BlueStone.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/on_surface_variant"
+            android:text="Tap any class to activate and mark attendance" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_today_attendance_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:nestedScrollingEnabled="false" />
+
+        <TextView
+            android:id="@+id/tv_empty_attendance_schedule"
+            style="@style/TextAppearance.BlueStone.BodyMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="No classes scheduled for today"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

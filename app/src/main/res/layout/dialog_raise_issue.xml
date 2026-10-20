@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_tile_attended"
+            android:padding="8dp"
+            android:src="@drawable/ic_warning"
+            app:tint="@color/primary"
+            android:contentDescription="Issue Icon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextAppearance.BlueStone.TitleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Raise Attendance Issue" />
+
+            <TextView
+                android:id="@+id/tv_issue_class_subtitle"
+                style="@style/TextAppearance.BlueStone.LabelMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/on_surface_variant"
+                android:text="Data Structures (CS202) • Today" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="14dp"
+        android:background="@color/outline" />
+
+    <!-- Reason Category Chips -->
+    <TextView
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/on_surface_variant"
+        android:text="Issue Reason" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_issue_reasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_reason_beacon"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Beacon/BLE failed" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_reason_present"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Present in class" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_reason_leave"
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On-Duty / Medical" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- Message text field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_issue_message"
+        style="@style/Widget.BlueStone.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Explain the issue briefly">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_issue_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="5"
+            android:gravity="top|start" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/on_surface_variant"
+        android:text="Submitted reports are forwarded directly to the course instructor." />
+
+</LinearLayout>

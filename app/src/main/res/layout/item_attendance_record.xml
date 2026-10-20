@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.BlueStone.CardView.Compact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_sm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Date column -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:minWidth="60dp">
+
+            <TextView
+                android:id="@+id/tv_record_date"
+                style="@style/TextAppearance.BlueStone.LabelLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/on_surface"
+                android:textStyle="bold"
+                android:text="Oct 18" />
+
+            <TextView
+                android:id="@+id/tv_record_session"
+                style="@style/TextAppearance.BlueStone.LabelMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Session 1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="@dimen/spacing_sm"
+            android:background="@color/border" />
+
+        <!-- Subject & notes -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_record_subject"
+                style="@style/TextAppearance.BlueStone.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Data Structures (CS202)" />
+
+            <TextView
+                android:id="@+id/tv_record_notes"
+                style="@style/TextAppearance.BlueStone.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Regular lecture" />
+        </LinearLayout>
+
+        <!-- Status badge -->
+        <TextView
+            android:id="@+id/tv_record_status_badge"
+            style="@style/Widget.BlueStone.StatusBadge.Present"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Present" />
+
+        <!-- Delete / Edit button -->
+        <ImageButton
+            android:id="@+id/btn_delete_record"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/spacing_xs"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/secondary"
+            android:contentDescription="@string/delete" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tv_calendar_day"
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18" />
+
+    <!-- Status dot container -->
+    <LinearLayout
+        android:id="@+id/ll_status_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view_dot_1"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginHorizontal="1dp"
+            android:background="@drawable/bg_badge_present"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_dot_2"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginHorizontal="1dp"
+            android:background="@drawable/bg_badge_absent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
