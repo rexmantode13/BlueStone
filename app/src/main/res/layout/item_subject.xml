@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.BlueStone.CardView.Compact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_sm"
+    android:focusable="true"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Subject details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_subject_code"
+                    style="@style/TextAppearance.BlueStone.LabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold"
+                    android:text="CS202" />
+
+                <TextView
+                    android:id="@+id/tv_subject_meta"
+                    style="@style/TextAppearance.BlueStone.LabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_sm"
+                    android:text="Sem 2 • 4 Credits" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_subject_name"
+                style="@style/TextAppearance.BlueStone.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textStyle="bold"
+                android:text="Data Structures and Algorithms" />
+
+            <TextView
+                android:id="@+id/tv_subject_faculty"
+                style="@style/TextAppearance.BlueStone.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prof. Donald Knuth" />
+
+        </LinearLayout>
+
+        <!-- Attendance % and Arrow -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/spacing_md">
+
+            <TextView
+                android:id="@+id/tv_subject_percentage"
+                style="@style/TextAppearance.BlueStone.Percentage.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85.0%" />
+
+            <TextView
+                android:id="@+id/tv_subject_status_badge"
+                style="@style/Widget.BlueStone.StatusBadge.Present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

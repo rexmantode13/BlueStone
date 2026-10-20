@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <!-- Back & Header Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_back_detail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="@string/cd_back" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_detail_code"
+                        style="@style/TextAppearance.BlueStone.LabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"
+                        android:text="CS202" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_name"
+                        style="@style/TextAppearance.BlueStone.HeadlineMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Structures and Algorithms" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_edit_detail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_edit"
+                    app:tint="@color/primary"
+                    android:contentDescription="@string/edit" />
+
+                <ImageButton
+                    android:id="@+id/btn_delete_detail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_delete"
+                    app:tint="@color/error"
+                    android:contentDescription="@string/delete" />
+            </LinearLayout>
+
+            <!-- Meta details row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/spacing_sm">
+
+                <TextView
+                    android:id="@+id/tv_detail_semester"
+                    style="@style/Widget.BlueStone.StatusBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_badge_unmarked"
+                    android:textColor="@color/secondary"
+                    android:text="Semester 2" />
+
+                <TextView
+                    android:id="@+id/tv_detail_credits"
+                    style="@style/Widget.BlueStone.StatusBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:background="@drawable/bg_badge_unmarked"
+                    android:textColor="@color/secondary"
+                    android:text="4 Credits" />
+
+                <TextView
+                    android:id="@+id/tv_detail_faculty"
+                    style="@style/Widget.BlueStone.StatusBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_xs"
+                    android:background="@drawable/bg_badge_unmarked"
+                    android:textColor="@color/secondary"
+                    android:text="Prof. Donald Knuth" />
+
+            </LinearLayout>
+
+            <!-- Attendance Hero Card for this subject -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.BlueStone.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/TextAppearance.BlueStone.TitleMedium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Attendance Status" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_status_badge"
+                            style="@style/Widget.BlueStone.StatusBadge.Present"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On Track" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:layout_marginTop="@dimen/spacing_md">
+
+                        <TextView
+                            android:id="@+id/tv_detail_percentage"
+                            style="@style/TextAppearance.BlueStone.Percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="85.0%" />
+
+                        <TextView
+                            android:id="@+id/tv_detail_fraction"
+                            style="@style/TextAppearance.BlueStone.BodyMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_md"
+                            android:layout_marginBottom="4dp"
+                            android:text="17 present, 3 absent • 20 classes" />
+                    </LinearLayout>
+
+                    <!-- Target / Projection text -->
+                    <TextView
+                        android:id="@+id/tv_detail_projection_message"
+                        style="@style/TextAppearance.BlueStone.LabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_sm"
+                        android:textColor="@color/primary"
+                        android:text="Target: 75% • Above target" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- View Syllabus Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_detail_view_syllabus"
+                style="@style/Widget.BlueStone.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:text="@string/view_syllabus"
+                app:icon="@drawable/ic_book" />
+
+            <!-- Allocated Subject Assignments (3-5 items) -->
+            <TextView
+                style="@style/TextAppearance.BlueStone.TitleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:textStyle="bold"
+                android:text="Allocated Assignments" />
+
+            <TextView
+                style="@style/TextAppearance.BlueStone.BodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/on_surface_variant"
+                android:text="Coursework tasks &amp; submission statuses" />
+
+            <LinearLayout
+                android:id="@+id/ll_assignments_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp" />
+
+            <!-- Attendance History for this Subject -->
+            <TextView
+                style="@style/TextAppearance.BlueStone.TitleMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:text="@string/attendance_history" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_detail_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tv_detail_empty_history"
+                style="@style/TextAppearance.BlueStone.BodyMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_md"
+                android:gravity="center"
+                android:text="@string/no_attendance_records"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
