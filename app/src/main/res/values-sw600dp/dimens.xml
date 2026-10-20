@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">24dp</dimen>
+    <integer name="grid_span_count">2</integer>
+    <integer name="dashboard_grid_span">3</integer>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="chart_bar_width">40dp</dimen>
+    <dimen name="chart_height">240dp</dimen>
+</resources>

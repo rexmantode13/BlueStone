@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+
+    <!-- Screen padding -->
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="content_max_width">840dp</dimen>
+
+    <!-- Card -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_stroke_width">1dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+
+    <!-- Touch targets -->
+    <dimen name="touch_target_min">48dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_headline_large">32sp</dimen>
+    <dimen name="text_headline_medium">28sp</dimen>
+    <dimen name="text_title_large">22sp</dimen>
+    <dimen name="text_title_medium">16sp</dimen>
+    <dimen name="text_body_large">16sp</dimen>
+    <dimen name="text_body_medium">14sp</dimen>
+    <dimen name="text_label_large">14sp</dimen>
+    <dimen name="text_label_medium">12sp</dimen>
+
+    <!-- Grid -->
+    <integer name="grid_span_count">1</integer>
+    <integer name="dashboard_grid_span">2</integer>
+
+    <!-- Nav rail width -->
+    <dimen name="nav_rail_width">80dp</dimen>
+    <dimen name="nav_side_width">240dp</dimen>
+
+    <!-- Form -->
+    <dimen name="form_max_width">480dp</dimen>
+    <dimen name="dialog_max_width">560dp</dimen>
+
+    <!-- Progress -->
+    <dimen name="progress_bar_height">8dp</dimen>
+    <dimen name="progress_bar_corner">4dp</dimen>
+
+    <!-- Calendar cell -->
+    <dimen name="calendar_cell_size">40dp</dimen>
+
+    <!-- Icon sizes -->
+    <dimen name="icon_size_sm">20dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">40dp</dimen>
+    <dimen name="icon_size_xl">64dp</dimen>
+
+    <!-- Bar chart -->
+    <dimen name="chart_bar_width">32dp</dimen>
+    <dimen name="chart_height">200dp</dimen>
+    <dimen name="chart_label_size">10sp</dimen>
+</resources>

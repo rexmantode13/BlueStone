@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Light Theme -->
+    <style name="Theme.BlueStone" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorErrorContainer">@color/error_container</item>
+        <item name="colorOnErrorContainer">@color/on_error_container</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/outline_variant</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.BlueStone.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.BlueStone.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.BlueStone.LargeComponent</item>
+
+        <item name="materialCardViewStyle">@style/Widget.BlueStone.CardView</item>
+        <item name="textInputStyle">@style/Widget.BlueStone.TextInputLayout</item>
+        <item name="materialButtonStyle">@style/Widget.BlueStone.Button</item>
+    </style>
+
+    <!-- Splash Theme -->
+    <style name="Theme.BlueStone.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primary</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.BlueStone</item>
+    </style>
+
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.BlueStone.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.BlueStone.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.BlueStone.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Card Style -->
+    <style name="Widget.BlueStone.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/outline</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <style name="Widget.BlueStone.CardView.Compact" parent="Widget.BlueStone.CardView">
+        <item name="contentPadding">14dp</item>
+        <item name="cardCornerRadius">18dp</item>
+    </style>
+
+    <!-- Text Input -->
+    <style name="Widget.BlueStone.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="hintTextColor">@color/primary</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="Widget.BlueStone.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.BlueStone.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.BlueStone.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Toggle Button Group for attendance status -->
+    <style name="Widget.BlueStone.ToggleButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">12dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- Base Styles for AAPT implicit hierarchy -->
+    <style name="Widget.BlueStone" parent="" />
+    <style name="TextAppearance.BlueStone" parent="TextAppearance.Material3.BodyMedium" />
+
+    <!-- Text Styles -->
+    <style name="TextAppearance.BlueStone.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textColor">@color/on_background</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/on_background</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/on_background</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/on_background</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/on_surface</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/on_surface_variant</item>
+    </style>
+
+    <!-- Status Badge Styles -->
+    <style name="Widget.BlueStone.StatusBadge" parent="Widget.BlueStone">
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.BlueStone.StatusBadge.Present" parent="Widget.BlueStone.StatusBadge">
+        <item name="android:background">@drawable/bg_badge_present</item>
+        <item name="android:textColor">@color/present</item>
+    </style>
+
+    <style name="Widget.BlueStone.StatusBadge.Absent" parent="Widget.BlueStone.StatusBadge">
+        <item name="android:background">@drawable/bg_badge_absent</item>
+        <item name="android:textColor">@color/absent</item>
+    </style>
+
+    <!-- Chip Style -->
+    <style name="Widget.BlueStone.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipCornerRadius">8dp</item>
+        <item name="chipMinHeight">36dp</item>
+    </style>
+
+    <!-- Bottom Nav -->
+    <style name="Widget.BlueStone.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.BlueStone.NavIndicator</item>
+    </style>
+
+    <style name="Widget.BlueStone.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primary_container</item>
+    </style>
+
+    <!-- Navigation Rail -->
+    <style name="Widget.BlueStone.NavigationRail" parent="Widget.Material3.NavigationRailView">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+    </style>
+
+    <!-- Toolbar Style -->
+    <style name="Widget.BlueStone.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.BlueStone.TitleLarge</item>
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <!-- Percentage display styles -->
+    <style name="TextAppearance.BlueStone.Percentage" parent="TextAppearance.BlueStone">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.BlueStone.Percentage.Small" parent="TextAppearance.BlueStone.Percentage">
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

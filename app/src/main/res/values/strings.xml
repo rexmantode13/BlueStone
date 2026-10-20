@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BlueStone</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_attendance">Attendance</string>
+    <string name="nav_subjects">Subjects</string>
+    <string name="nav_timetable">Timetable</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Auth -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="student_id">Student ID</string>
+    <string name="password">Password</string>
+    <string name="login">Sign In</string>
+    <string name="logging_in">Signing in…</string>
+    <string name="login_error_empty_id">Student ID is required</string>
+    <string name="login_error_empty_password">Password is required</string>
+    <string name="login_error_invalid">Invalid Student ID or password</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirm">Are you sure you want to log out?</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting">Hi, %1$s</string>
+    <string name="overall_attendance">Overall Attendance</string>
+    <string name="today_classes">Today\'s Classes</string>
+    <string name="below_threshold">Below Threshold</string>
+    <string name="subjects_at_risk">Subjects at Risk</string>
+    <string name="no_classes_today">No classes scheduled today</string>
+    <string name="quick_actions">Quick Actions</string>
+
+    <!-- Attendance -->
+    <string name="mark_attendance">Mark Attendance</string>
+    <string name="attendance_history">Attendance History</string>
+    <string name="select_subject">Select Subject</string>
+    <string name="select_date">Select Date</string>
+    <string name="session">Session</string>
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+    <string name="not_marked">Not Marked</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="delete_attendance_confirm">Delete this attendance record?</string>
+    <string name="attendance_saved">Attendance saved</string>
+    <string name="attendance_deleted">Attendance deleted</string>
+    <string name="no_attendance_records">No attendance records yet</string>
+    <string name="no_dash">—</string>
+    <string name="percentage_format">%.1f%%</string>
+    <string name="fraction_format">%1$d / %2$d</string>
+    <string name="sessions_to_reach">%1$d more classes needed to reach %2$.0f%%</string>
+    <string name="above_target">You\'re above target!</string>
+    <string name="filter">Filter</string>
+    <string name="all_subjects">All Subjects</string>
+    <string name="date_range">Date Range</string>
+    <string name="monthly_calendar">Monthly Calendar</string>
+
+    <!-- Subjects -->
+    <string name="add_subject">Add Subject</string>
+    <string name="edit_subject">Edit Subject</string>
+    <string name="subject_name">Subject Name</string>
+    <string name="subject_code">Subject Code</string>
+    <string name="semester">Semester</string>
+    <string name="credits">Credits</string>
+    <string name="faculty">Instructor / Lecturer (Optional)</string>
+    <string name="target_percentage">Target %</string>
+    <string name="notes">Notes</string>
+    <string name="delete_subject_confirm">Delete \"%1$s\"? Attendance records will be archived.</string>
+    <string name="subject_deleted">Subject archived</string>
+    <string name="no_subjects">No subjects added yet</string>
+    <string name="search">Search</string>
+    <string name="sample_data_label">Sample data, editable</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_percentage">Attendance %</string>
+    <string name="sort_code">Code</string>
+    <string name="all_semesters">All Semesters</string>
+    <string name="view_syllabus">View Syllabus</string>
+
+    <!-- Syllabus -->
+    <string name="syllabus">Syllabus</string>
+    <string name="add_unit">Add Unit</string>
+    <string name="edit_unit">Edit Unit</string>
+    <string name="unit_number">Unit Number</string>
+    <string name="unit_title">Unit Title</string>
+    <string name="topics">Topics</string>
+    <string name="objectives">Objectives</string>
+    <string name="completed">Completed</string>
+    <string name="completion_format">%1$d / %2$d completed</string>
+    <string name="delete_unit_confirm">Delete this unit?</string>
+    <string name="no_syllabus_units">No syllabus units added</string>
+
+    <!-- Timetable -->
+    <string name="add_session">Add Session</string>
+    <string name="edit_session">Edit Session</string>
+    <string name="day">Day</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="room">Room (Optional)</string>
+    <string name="overlap_warning">This session overlaps with another class</string>
+    <string name="delete_session_confirm">Delete this session?</string>
+    <string name="no_sessions">No sessions scheduled</string>
+    <string name="today">Today</string>
+    <string name="weekly_view">Week</string>
+    <string name="daily_view">Today</string>
+
+    <!-- Reports -->
+    <string name="overall_statistics">Overall Statistics</string>
+    <string name="subject_wise">Subject-wise</string>
+    <string name="monthly_summary">Monthly Summary</string>
+    <string name="at_risk_subjects">At-Risk Subjects</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="share">Share</string>
+    <string name="no_data_for_reports">Not enough data for reports</string>
+    <string name="csv_exported">CSV exported successfully</string>
+    <string name="total_classes">Total Classes</string>
+    <string name="classes_attended">Classes Attended</string>
+    <string name="classes_missed">Classes Missed</string>
+
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="student_name">Name</string>
+    <string name="course">Course</string>
+    <string name="academic_year">Academic Year</string>
+    <string name="college">College (Optional)</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="profile_saved">Profile saved</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="attendance_threshold">Attendance Threshold</string>
+    <string name="threshold_hint">Minimum attendance percentage</string>
+    <string name="appearance">Appearance</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="system_default">System Default</string>
+    <string name="data_management">Data Management</string>
+    <string name="export_data">Export Data</string>
+    <string name="reset_demo_data">Reset Demo Data</string>
+    <string name="reset_confirm">Reset all data to demo defaults? This cannot be undone.</string>
+    <string name="data_reset">Data reset to defaults</string>
+    <string name="about">About</string>
+    <string name="app_version">Version %1$s</string>
+    <string name="about_description">BlueStone is a local demo attendance tracker.\nThis is not server-backed authentication.</string>
+
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="error_occurred">Something went wrong</string>
+    <string name="retry">Retry</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="confirm">Confirm</string>
+    <string name="empty_field_error">This field is required</string>
+    <string name="invalid_number">Please enter a valid number</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_app_logo">BlueStone logo</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_add">Add new item</string>
+    <string name="cd_search">Search</string>
+    <string name="cd_filter">Filter</string>
+    <string name="cd_more_options">More options</string>
+    <string name="cd_status_present">Present</string>
+    <string name="cd_status_absent">Absent</string>
+    <string name="cd_status_unmarked">Not marked</string>
+    <string name="cd_close">Close</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_lg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Overlap Warning Banner -->
+        <TextView
+            android:id="@+id/tv_tt_overlap_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge_warning"
+            android:padding="@dimen/spacing_sm"
+            android:textColor="@color/warning"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="@string/overlap_warning"
+            android:visibility="gone" />
+
+        <!-- Subject Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tt_subject"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/select_subject">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_tt_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Day Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tt_day"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/day">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_tt_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Time Picker Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_sm">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tt_start_time"
+                style="@style/Widget.BlueStone.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start: 09:00" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tt_end_time"
+                style="@style/Widget.BlueStone.Button.Outlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/spacing_sm"
+                android:text="End: 10:00" />
+
+        </LinearLayout>
+
+        <!-- Room Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tt_room"
+            style="@style/Widget.BlueStone.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/room">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_tt_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Optional Faculty -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_tt_faculty"
+            style="@style/Widget.BlueStone.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:hint="@string/faculty">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_tt_faculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Cancelled Class Checkbox -->
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cb_tt_cancelled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:text="Cancelled session (excluded from %)" />
+
+    </LinearLayout>
+
+</ScrollView>

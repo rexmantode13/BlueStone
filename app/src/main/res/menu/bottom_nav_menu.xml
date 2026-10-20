@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/nav_dashboard" />
+    <item
+        android:id="@+id/attendanceFragment"
+        android:icon="@drawable/ic_attendance"
+        android:title="@string/nav_attendance" />
+    <item
+        android:id="@+id/subjectsFragment"
+        android:icon="@drawable/ic_subjects"
+        android:title="@string/nav_subjects" />
+    <item
+        android:id="@+id/timetableFragment"
+        android:icon="@drawable/ic_timetable"
+        android:title="@string/nav_timetable" />
+    <item
+        android:id="@+id/reportsFragment"
+        android:icon="@drawable/ic_reports"
+        android:title="@string/nav_reports" />
+</menu>

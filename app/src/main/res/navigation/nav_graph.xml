@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bluestone.attendance.ui.login.LoginFragment"
+        android:label="@string/login_title">
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.bluestone.attendance.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_attendance"
+            app:destination="@id/attendanceFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_subjects"
+            app:destination="@id/subjectsFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_timetable"
+            app:destination="@id/timetableFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_reports"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_profile"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/attendanceFragment"
+        android:name="com.bluestone.attendance.ui.attendance.AttendanceFragment"
+        android:label="@string/nav_attendance" />
+
+    <fragment
+        android:id="@+id/subjectsFragment"
+        android:name="com.bluestone.attendance.ui.subjects.SubjectsFragment"
+        android:label="@string/nav_subjects">
+        <action
+            android:id="@+id/action_subjects_to_detail"
+            app:destination="@id/subjectDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subjectDetailFragment"
+        android:name="com.bluestone.attendance.ui.subjects.SubjectDetailFragment"
+        android:label="@string/subject_name">
+        <argument
+            android:name="subjectId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_detail_to_syllabus"
+            app:destination="@id/syllabusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/syllabusFragment"
+        android:name="com.bluestone.attendance.ui.syllabus.SyllabusFragment"
+        android:label="@string/syllabus">
+        <argument
+            android:name="subjectId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.bluestone.attendance.ui.timetable.TimetableFragment"
+        android:label="@string/nav_timetable" />
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.bluestone.attendance.ui.reports.ReportsFragment"
+        android:label="@string/nav_reports" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bluestone.attendance.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.bluestone.attendance.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings">
+        <action
+            android:id="@+id/action_settings_to_login"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>
