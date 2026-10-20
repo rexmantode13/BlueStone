@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Header Avatar & Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_tile_total"
+            android:padding="14dp"
+            android:src="@drawable/ic_profile"
+            app:tint="@color/primary"
+            android:contentDescription="Profile Avatar" />
+
+        <TextView
+            android:id="@+id/tv_prof_name"
+            style="@style/TextAppearance.BlueStone.TitleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:text="Rohan Malhotra" />
+
+        <TextView
+            android:id="@+id/tv_prof_id"
+            style="@style/TextAppearance.BlueStone.LabelMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_badge_glass"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="3dp"
+            android:textColor="@color/primary"
+            android:text="ID: CS2026001" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="16dp"
+        android:background="@color/outline" />
+
+    <!-- Details -->
+    <TextView
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/on_surface_variant"
+        android:text="Degree &amp; Program" />
+
+    <TextView
+        android:id="@+id/tv_prof_course"
+        style="@style/TextAppearance.BlueStone.BodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textStyle="bold"
+        android:text="B.Tech Computer Science &amp; Engineering" />
+
+    <TextView
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/on_surface_variant"
+        android:text="Academic Standing" />
+
+    <TextView
+        android:id="@+id/tv_prof_sem"
+        style="@style/TextAppearance.BlueStone.BodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Semester 2 (2025–2026)" />
+
+    <TextView
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/on_surface_variant"
+        android:text="Student Email" />
+
+    <TextView
+        android:id="@+id/tv_prof_email"
+        style="@style/TextAppearance.BlueStone.BodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/primary"
+        android:text="rohan.cs@bluestone.edu" />
+
+    <TextView
+        style="@style/TextAppearance.BlueStone.LabelMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/on_surface_variant"
+        android:text="Department / College" />
+
+    <TextView
+        android:id="@+id/tv_prof_college"
+        style="@style/TextAppearance.BlueStone.BodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Computer Science Engineering" />
+
+</LinearLayout>
