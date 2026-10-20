@@ -1,0 +1,87 @@
+# Built application files & packages
+*.apk
+*.aar
+*.ap_
+*.aab
+apk/
+**/apk/
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated build directories
+bin/
+gen/
+out/
+build/
+**/build/
+app/build/
+.cxx/
+.externalNativeBuild/
+.bundle/
+
+# Agents / AI configuration
+.agents/
+
+# Gradle files & caches
+.gradle/
+buildOutputCleanup/
+
+# Local configuration & environment (contains personal SDK paths & usernames)
+local.properties
+secrets.properties
+*.properties.local
+.env
+.env.*
+
+# Sensitive credentials, API keys & Keystores
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+google-services.json
+firebase-debug.log*
+
+# Proguard / R8 folder
+proguard/
+
+# Log Files & profiling dumps
+*.log
+*.hprof
+captures/
+.navigation/
+
+# IntelliJ IDEA / Android Studio
+*.iml
+.idea/
+.idea/*
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# VS Code
+.vscode/
+
+# External SDK binaries / tools copied locally
+adb.exe
+AdbWinApi.dll
+AdbWinUsbApi.dll
+platform-tools/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Nn]otebooks
+
+# Room schema exports (auto-generated)
+app/schemas/
+schemas/
+
+# Crash reports & diagnostics
+*.dmp
+crash-reports/
