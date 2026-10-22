@@ -85,3 +85,6 @@ schemas/
 # Crash reports & diagnostics
 *.dmp
 crash-reports/
+
+# Root backup screenshots
+/Screenshot_*.png
