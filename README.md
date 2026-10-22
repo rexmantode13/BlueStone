@@ -1,4 +1,4 @@
-# 🎓 BlueStone — Student Attendance & Academic Tracker
+# 🎓 BlueStone — Student Attendance & Assignment Tracker
 
 [![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=flat&logo=android&logoColor=white)](https://developer.android.com/)
 [![Compile SDK](https://img.shields.io/badge/Compile%20SDK-35-blue.svg)](https://developer.android.com/about/versions/15)
@@ -148,4 +148,4 @@ BlueStone/
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
+This project is licensed under the [MIT License](LICENSE) 
